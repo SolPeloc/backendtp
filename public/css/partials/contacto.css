@@ -1,0 +1,167 @@
+/* body {
+  background-color: rgba(236, 236, 236, 0.8);
+} */
+
+/*info*/
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  background-color: #c2c9cc;
+  padding: 6px;
+  /* margin-top: 6%;*/
+
+}
+
+.grid-item {
+  /*background-color: rgba(236, 236, 236, 0.8);*/
+  padding: 6px;
+  font-size: 16px;
+  text-align: center;
+  margin-right: 2rem;
+}
+
+.logo_contacto {
+  width: 10%;
+  margin-top: 75px;
+}
+
+.contacto_h4 {
+  color: rgb(23 65 141);
+  font-family: 'Permanent Marker';
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: 0;
+}
+
+.lbl_contacto {
+  color: rgb(23 65 141);
+  font-family: "Montserrat", sans-serif;
+}
+
+.contacto_h2 {
+  display: none;
+}
+
+/* formulario */
+* {
+  box-sizing: border-box;
+
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 9px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  resize: vertical;
+}
+
+.form-check {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.form-check-input {
+  margin-right: 5px; 
+}
+
+
+.enviar {
+  width: 35% !important;
+}
+
+label {
+  padding: 9px 9px 9px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: #1c8fe7;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 9px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type=submit]:hover {
+  background-color: rgba(1, 135, 253, 0.369);
+}
+
+#submit {
+  margin-top: 1rem !important;
+}
+
+.btn-primary {
+  background-color: rgb(23 65 141) !important;
+  border-color: rgb(23 65 141) !important;
+}
+
+.btn-primary:hover {
+  /*
+    background-color: #0b5ed7!important;
+    border-color: #0a58ca!important;*/
+  background-color: rgb(29 85 186) !important;
+  border-color: rgb(29 85 186) !important;
+}
+
+/*validacion input*/
+
+.error {
+  font-style: oblique;
+  font-family: 'Fredoka', sans-serif;
+  color: red;
+
+}
+
+.error_input {
+  border: 2px solid red !important;
+}
+
+
+
+
+@media (max-width: 850px) {
+
+  .grid-container {
+    grid-template-columns: none;
+  }
+
+  .grid-item:nth-child(2) {
+    grid-row-start: 1;
+  }
+
+  .logo_contacto {
+    display: none;
+  }
+
+  .contacto_h2 {
+    display: block;
+    color: rgb(23 65 141);
+    /*font-family: "Jaro", sans-serif;*/
+    /*  font-family: "Comfortaa", sans-serif;
+  font-weight: 400;*/
+    font-family: "Montserrat", sans-serif;
+  }
+
+  #submit {
+    width: 50%;
+  }
+
+  .grid-item {
+    margin-right: 0;
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+  input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+
+}

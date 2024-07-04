@@ -1,0 +1,123 @@
+.page-header {
+    padding: 20px 0;
+    background: #ffffff;
+    margin-bottom: 20px;
+    color: #464646;
+    border-top: 1px #E97171;
+    }
+    
+    
+    .h1-tittle {
+    text-align: center;
+    font-weight: 500px;
+    font-size: 30px;
+    font-family: 'Poppins';
+    padding-top: 15px;
+    padding-bottom: 10px;
+    }
+    
+    .text-juegoteca {
+        text-align: center;
+    font-weight: 500px;
+    font-size: 20px;
+    margin: 1% 10% 1% 10%;
+    }
+    
+    strong{
+    color: #E97171;
+    }
+    
+    .strong-tabla{
+    color: #464646;
+    }
+    .container-accordion{
+    margin: 1% 10% 3% 10%;
+    }
+    
+    .accordion {
+    background-color: #E97171;
+    border: 1px solid transparent; 
+    border-radius: 5px;
+    color: white;
+    font-size: 18px;
+    font-family: 'Poppins';
+    font-weight: bold;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+    }
+      
+    .accordion:hover {
+    background-color: white;
+    border-color: #E97171;
+    color: #E97171;
+    }
+    
+    .panel {
+    display: none;
+    padding: 1% 0% 1.2% 0%;
+    text-align: center;
+    margin: 0;
+    }
+      
+    .tabla-info{
+    margin: 3% 0% 3% 0%;
+    width: 10%;
+    text-align: center;
+    }
+    .tabla-info {
+    width: 100%;
+    }
+    
+    .columnas {
+    width: 30%;
+    padding: 20px;
+    text-align: center;
+    vertical-align: top;
+    font-weight: normal;
+    color: #464646;
+    }
+    
+    .columna-wsp{
+    border-left: solid 1px #464646;
+    border-right: solid 1px #464646;
+    }
+    
+    .iconitos {
+    width: 50px;
+    height: 50px;
+    }
+        
+    .tittle {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #464646;
+    }
+    
+    @media (max-width: 850px) {
+    .page-header {
+    padding: 10px 0;
+    margin-bottom: 10px;
+    }
+    .text-juegoteca {
+    font-size: 18px;
+    margin: 5% 10% 5% 10%;
+    }
+    .tabla-info th{
+    display: block;
+    width: 100%;
+    }
+    .columna-wsp{
+    border-left: none;
+    border-right: none;
+    }
+    .textito{
+    font-size: 14px;
+    }
+    }
