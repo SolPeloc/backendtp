@@ -122,7 +122,7 @@ function validar(formulario) {
 
 const modificacion_producto=()=>{
     fetch(url+id, {
-        method: 'PUT',
+        method: 'PUT', 
     headers: {
         'Content-Type':'application/json'
     },

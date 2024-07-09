@@ -1,38 +1,7 @@
 const contenedor = document.querySelector('tbody')
 let resultados = ''
 const url = 'http://localhost:8080/productos/'
-/*
-let cargarDatos =  async () => {
-	//async () => {
-        const res = await fetch(`http://localhost:8080/productos/`)
-        const datos = await res.json()
-        if(datos.length >0)
-        {
-        datos.forEach(registro => {
-            contenedor.innerHTML += `<tr>
-            <td>${registro.id}</td>
-            <td>${registro.titulo}</td>
-            <td>${registro.tipo}</td>
-            <td>${registro.precio}</td>
-            <td>
-            <button class="btnEditar btn btn-primary me-1"></button>
-            <a class="btnBorrar btn btn-danger me-1" href="#" "></a>
-            </td>
-               
-       </tr>
-    `    
-    
-        })
-    }else{
-         //sino trajo datos da vacia la busqueda
-    
-         busquedaVacia()
-    }
-    
-      } */
-    
-//}   
-    
+
 
 const cargarDatos =()=>{
     fetch(url)

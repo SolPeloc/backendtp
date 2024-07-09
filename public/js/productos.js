@@ -56,7 +56,7 @@ const crearLineaNueva = (tipo,id,titulo,descripcion,precio,imagen) => {
 
   div_item.innerHTML += `
                          <div class="product-card">
-                         <img src="../../images/${tipo}/${imagen}.png" alt="${id}" class="product-img">
+                         <img src="./../images/${tipo}/${imagen}.png" alt="${titulo}" class="product-img">
                          <i class="fa-regular fa-heart add-cart"></i>
                          <div class="text-area">
                          <h3 class="product-title">${titulo}</h3>
