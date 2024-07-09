@@ -18,18 +18,7 @@ router.get('/productos/:id',controladores.getProductoById);
 router.post('/productos/',controladores.createProducto);
 router.put('/productos/:id',controladores.updateProducto);
 router.delete('/productos/:id', controladores.deleteProducto);
-/*
-router.post('/productos/',uploadFile.single('campoFormulario'),controladores.createProducto);
-/*
-router.delete('/productos/:id', controladores.deleteProducto)
-router.post('/productos',controladores.createProducto)
-router.put('/productos/:id',controladores.updateProducto)
-router.get('/productos/buscar', controladores.buscar_producto)
-/*
-router.get("/listado", controladores.getListado)
-router.post('/listado', uploadFile.single('archivo'), controladores.crearRegistro)
-router.get('/modificar/:num', controladores.getModificar)
-router.patch('/modificar', controladores.actualizar)
-router.delete('/listado', controladores.eliminar)
-*/
+
+router.get('/usuarios', controladores.getUsuarios);
+router.delete('/usuarios/:id', controladores.deleteUsuario);
 module.exports = router

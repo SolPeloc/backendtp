@@ -1,0 +1,14 @@
+.textSpan a {
+    text-decoration: none;
+    color: rgb(23 65 141);
+    font-weight: bold;
+    /*background-color: rgb(13, 110, 253) */
+}
+/*posicion login*/
+#panel_login {
+    height: 80vh!important;
+}
+
+.invisible{
+ display: none;
+}

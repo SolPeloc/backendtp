@@ -3,7 +3,7 @@ const express = require(`express`)
 const override = require('method-override')
 const rutas = require('./src/routes/mainRoutes.js')
 var cors = require('cors');  //npm install cors
-//const rutasAdmin = require('./src/routes/adminRoutes.js')
+const rutasLogin = require("./src/routes/loginRoutes.js");
 const app = express()
 
 const port = 8080 || process.env.PORT || 3000
@@ -28,7 +28,7 @@ app.use(cors());
 //app.use(override('_metodo'))
 
 app.use('/', rutas)
-//app.use('/admin', rutasAdmin) // /admin/loquesea /admin/xyz
+app.use("/login", rutasLogin);
 
 app.use((req, res, next) =>{
 	res.status(404).send(`<h1 style="color: red">Recurso no encontrado!</h1>`)
