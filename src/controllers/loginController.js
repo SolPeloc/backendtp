@@ -56,22 +56,26 @@ module.exports= {
     if(err) throw err;
 		res.json({message: "Usuario creado",usuarioId: result.insertId});
 	});
-},/*
+},
 	login: async (req, res) =>{
+    try{
 		const {user, password} = req.body
-        const sql = 'SELECT * FROM productos where user = ?';
-	    db.query(sql,[user], (err, result)=>{
-		const valido =  db.query(sql,[user])
-        console.log(valido)// db.query(`SELECT * FROM usuarios WHERE user = ?`, user)
-		if(valido === undefined){
+        const sql = 'SELECT * FROM usuarios where usuario = ?';
+	    db.query(sql,[user], async (err, result)=>{
+     
+	if(result.length == 0 || !(await bcrypt.compare(password,result[0].password))){
 			res.status(404).send('Usuario no encontrado')
-		} else if(!(bcrypt.compare(password, valido.password))){
-			res.status(401).send({auth: false, token: null})
-		} else {
-			const token = jwt.sign({id: valido.id}, jwtconfig.secretKey, {expiresIn: jwtconfig.tokenExpiresIn})
+		} //else if(!(bcrypt.compare(password, valido.password))){
+			//res.status(401).send({auth: false, token: null})
+		/*} */ else {
+      const id = result[0].id
+			const token = jwt.sign({id:id}, jwtconfig.secretKey, {expiresIn: jwtconfig.tokenExpiresIn})
 			//req.session.userID = valido.id
 			res.status(201).send({auth: true, token})
-		}
+		} 
     })
-	},*/
-}
+    }catch(error){
+      console.log(error)
+    }
+  }
+  }

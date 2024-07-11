@@ -58,8 +58,8 @@ function validarForm(formulario) {
         showConfirmButton: false,
         timer: 2000,
       })*/
-      //limpiarTxt();
- //      login()
+     // limpiarTxt();
+       login()
       //window.location.href = "./tabla_productos.html";
     });
   }
@@ -67,7 +67,29 @@ function validarForm(formulario) {
   validarForm(formulario);  
 
 
-
+  const login = async () => {
+    const user = document.querySelector(`[name='user']`).value
+    const password = document.querySelector(`[name='password']`).value
+    const resp = await fetch(`/login/login`, { 
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ user, password }) 
+    })
+    if(resp.status === 404){
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Usuario o password incorrecto",
+      });
+      throw ("Usuario inválido")
+      
+    } else if(resp.status === 401){
+      throw ("Password incorrecto")
+    }
+    const data = await resp.json()
+    localStorage.setItem("jwt-token", data.token)
+    window.location.href="./tabla_productos.html"
+  }
 /*
   const cambioPanel = () =>{
     panel_login.classList.toggle("invisible");
